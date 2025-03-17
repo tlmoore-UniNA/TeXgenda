@@ -24,17 +24,17 @@
 % SET VARIABLES HERE                                         %
 
 % Year number you want to generate the calendar for:
-    \setcounter{ThisYear}{2023}             
+    \setcounter{ThisYear}{2025}             
 
 % Which day is the January, 1st? (1 for Monday, 2 for Tuesday, etc.)
-    \setcounter{NewYearsDay}{2}
+    \setcounter{NewYearsDay}{3}
 
 % Which week does January, 1st belongs to?
     % Choose 52 (sometimes 53) or 1. Week 1 is not necessary the week of Jan, 1st; but *it is the week of Jan, 4th.*)
-    \setcounter{NewYearsWeek}{1}
+    \setcounter{NewYearsWeek}{52}
 
 % How many weeks this year? (Choose 52 or 53, appropriately)
-    \setcounter{NumberOfWeeksThisYear}{53}
+    \setcounter{NumberOfWeeksThisYear}{52}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -208,15 +208,16 @@
         \stepNDOY
 
         %% Draw lines
+				%%% Thin gray lines on right hand side
         \foreach \i in {1, 1.2, ..., 7}{%
-            \draw [lgray, thin] (2,\i) -- (4,\i);
+            \draw [lgray, thin] (2.25,\i) -- (4,\i);
         }
 
-        \path (-0.35,0.25) -- (4,0.25);
+        \path (-0.35,0.25) -- (2.25,0.25);
         \foreach \i in {1,...,7} {%
-            \draw (-0.35,\i) -- (4,\i);
+            \draw (-0.35,\i) -- (2.25,\i);
         }
-        \draw (2,1) -- (2,7);
+        \draw (2.25,1) -- (2.25,7);
 
         \end{tikzpicture}%
     }
